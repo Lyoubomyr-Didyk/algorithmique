@@ -8,6 +8,7 @@ number.push(parseInt(prompt("Please enter your sedcond number!")));
 number.push(parseInt(prompt("Please enter your last number!")));
 
 console.log(number);
+
 for(let i = 0; i < number.length; i++){
     if (number[i] > biggestNumber){
         biggestNumber = number[i]

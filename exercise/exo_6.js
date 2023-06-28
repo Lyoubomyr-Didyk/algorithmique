@@ -15,6 +15,15 @@ function month (){
 }
 
 
+function isleapYear(year){
+    
+    if(year % 4 == 0 && year % 100 != 0){
+        return true;
+    } else{
+        return false;
+    }
+}
+
 
 function numberOfDays(year, month){
     if (month === 'avril' || month === 'juin' || month === 'septembre' || month === 'novembre'){
@@ -22,7 +31,7 @@ function numberOfDays(year, month){
     } if (month === 'janvier' || month === 'mars' || month === 'mai' || month === 'juillet' || month === 'aout' || month ==='octobre' || month === 'décembre'){
         return 31;
     } if (month === 'fevrier'){
-        if(year % 4 == 0 && year % 100 != 0){
+        if(isleapYear(year)){
             return 29;
         }else {
             return 28;

@@ -12,23 +12,32 @@ function choiseLetter (){
     return lettre
 }
 
+
 function checkVowels (choise, vowels){
     let message;
-    for(let i = 0; i < vowels.length; i++){
 
-        console.log(vowels[i])
+    for(const element of vowels){
 
-        if(vowels[i] === choise){
-            message = `La lettre "${choise}" est une voyelle.`
-        }
-        
-        else {
-            message = `La lettre "${choise}" est une consonne.`
+        if(element === choise){
+            return `La lettre "${choise}" est une voyelle.`
         }
     }
-    return message;
+    
+    return `La lettre "${choise}" est une consonne.`;
 
 }
 
+//**************** includes  *****************************/
 
-console.log(checkVowels(choiseLetter (), vowels));
+// function checkVowels (choice, vowels){
+//     let message;
+
+//         if(vowels.includes(choice)){
+//             message = `La lettre "${choice}" est une voyelle.`
+//         } else {
+//              message = `La lettre "${choice}" est une consonne.`
+//             }
+
+//     return message;
+
+// }
